@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Spoiler</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+    <style>
+        .hover-1 {
+            background-image: linear-gradient(#36b9cc,#36b9cc);
+            background-size: 0 100%;
+            background-repeat: no-repeat;
+            transition: .4s;
+        }
+        .hover-1:hover {
+            background-size: 100% 100%;
+        }
+
+        .hover-2 {
+            background: 
+                linear-gradient(#36b9cc 0 0) no-repeat
+                calc(200% - var(--i, 0) * 100%) 100% / 200% calc(100% * var(--i, 0) + .08em);
+            transition: .3s calc(var(--i, 0) * .3s), background-position .3s calc(.3s - calc(var(--i, 0) * .3s));
+        }
+        .hover-2:hover {
+            --i: 1;
+        }
+    </style>
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+                <div class="sidebar-brand-text mx-3">Spoiler</div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item">
+                <a class="nav-link" href="/">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Home</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Contents
+            </div>
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item active">
+                <a class="nav-link" href="/pattern">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Emotion Pattern</span></a>
+            </li>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="/flow">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Emotion Flow</span></a>
+            </li>
+        </ul>
+        <!-- End of Sidebar -->
+
+        
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    <!-- Topbar Navbar -->
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <h1 class="h3 mb-2 text-gray-800">4가지 감정(기쁨, 슬픔, 불안, 분노) 중 한국 드라마에서의 <a class="bg-gradient-secondary text-white">불안</a> 패턴</h1>
+                    <p class="mb-4">
+                        4가지의 감정 별로 실루엣 스코어를 기준으로 K-means Clustering을 진행한 결과
+                    </p>
+
+                    <!-- Select Clusters -->
+                    <div class="row">
+                        <div class="col-lg-3 mb-4">
+                            <div class="card bg-primary shadow hover-2">
+                                <div class="card-body text-center text-lg">
+                                    <a href="/pattern/joy" class="text-white">기쁨</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 mb-4">
+                            <div class="card bg-primary shadow hover-2">
+                                <div class="card-body text-center text-lg">
+                                    <a href="/pattern/sad" class="text-white">슬픔</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 mb-4">
+                            <div class="card bg-info shadow hover-2">
+                                <div class="card-body text-center text-lg">
+                                    <a href="/pattern/anxiety" class="text-white">불안</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 mb-4">
+                            <div class="card bg-primary shadow hover-2">
+                                <div class="card-body text-center text-lg">
+                                    <a href="/pattern/anger" class="text-white">분노</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Content Row -->
+                    <div class="row">
+
+                        <div class="col-xl-12 col-lg-7">
+
+                            <!-- Cluster Charts -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Clusters : 불안</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div style="height: 500px;">
+                                        <div class='tableauPlaceholder' id='viz1661445554792' style='position: relative'><noscript><a href='#'><img alt='불안 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;_1&#47;_16614372663890&#47;anxiety&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='_16614372663890&#47;anxiety' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;_1&#47;_16614372663890&#47;anxiety&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='ko-KR' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1661445554792');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height='100%';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+                                    </div>                                    
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+
+                    <div class="row">
+                        <!-- a -->
+                        <div class="dropdown no-arrow col-lg-3 mb-4">
+                            <button class="btn btn-secondary dropdown-toggle col-xl-12" type="button"
+                                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false" style="background-color: #40719f;
+                                background-image: linear-gradient(180deg, #40719f 10%, #40719f 100%);
+                                background-size: cover;">
+                                해당 드라마 펼쳐보기(A)
+                            </button>
+                            <div class="dropdown-menu col-xl-12" aria-labelledby="dropdownMenuButton">                               
+                                <a class="dropdown-item" href="#">그 남자의 기억법</a>      
+                                <a class="dropdown-item" href="#">나의 해방일지</a>
+                                <a class="dropdown-item" href="#">남자친구</a>
+                                <a class="dropdown-item" href="#">너는 나의 봄</a>
+                                <a class="dropdown-item" href="#">달리와 감자탕</a>
+                                <a class="dropdown-item" href="#">도도솔솔라라솔</a>
+                                <a class="dropdown-item" href="#">너를 닮은 사람</a>
+                                <a class="dropdown-item" href="#">봄밤</a>
+                                <a class="dropdown-item" href="#">선배 그 립스틱 바르지 마요</a>
+                                <a class="dropdown-item" href="#">여신강림</a>
+                                <a class="dropdown-item" href="#">편의점 샛별이</a>      
+                                <a class="dropdown-item" href="#">라이브온</a>
+                                <a class="dropdown-item" href="#">멜랑꼴리아</a>
+                                <a class="dropdown-item" href="#">사내 맞선</a>
+                                <a class="dropdown-item" href="#">악의 꽃</a>
+                                <a class="dropdown-item" href="#">우아한 친구들</a>
+                                <a class="dropdown-item" href="#">출사표</a>
+                            </div>
+                        </div>
+
+                        <!-- b -->
+                        <div class="dropdown no-arrow col-lg-3 mb-4">
+                            <button class="btn btn-secondary dropdown-toggle col-xl-12" type="button"
+                                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false" style="background-color: #bce4d8;
+                                background-image: linear-gradient(180deg, #bce4d8 10%, #bce4d8 100%);
+                                background-size: cover;">
+                                해당 드라마 펼쳐보기(B)
+                            </button>
+                            <div class="dropdown-menu col-xl-12" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">내가 가장 예뻤을 때</a>      
+                                <a class="dropdown-item" href="#">눈이 부시게</a>
+                                <a class="dropdown-item" href="#">단 하나의 사랑</a>
+                                <a class="dropdown-item" href="#">달이 뜨는 강</a>
+                                <a class="dropdown-item" href="#">동백꽃 필 무렵</a>
+                                <a class="dropdown-item" href="#">사생활</a>
+                                <a class="dropdown-item" href="#">쌍갑포차</a>
+                                <a class="dropdown-item" href="#">오! 주인님</a>
+                                <a class="dropdown-item" href="#">홍천기</a>
+                                <a class="dropdown-item" href="#">보쌈 - 운명을 훔치다</a>
+                                <a class="dropdown-item" href="#">스물다섯 스물하나</a>      
+                                <a class="dropdown-item" href="#">슬플 때 사랑한다</a>
+                                <a class="dropdown-item" href="#">어느 날 우리집 현관으로 멸망이 들어왔다</a>
+                                <a class="dropdown-item" href="#">옷소매 붉은 끝동</a>
+                                <a class="dropdown-item" href="#">호텔 델루나</a>
+                            </div>
+                        </div>
+
+                        <!-- c -->
+                        <div class="dropdown no-arrow col-lg-3 mb-4">
+                            <button class="btn btn-secondary dropdown-toggle col-xl-12" type="button"
+                                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false" style="background-color: #89b8da;
+                                background-image: linear-gradient(180deg, #89b8da 10%, #89b8da 100%);
+                                background-size: cover;">
+                                해당 드라마 펼쳐보기(C)
+                            </button>
+                            <div class="dropdown-menu col-xl-12" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">그녀의 사생활</a>      
+                                <a class="dropdown-item" href="#">그놈이 그놈이다</a>
+                                <a class="dropdown-item" href="#">기상청 사람들 : 사내연애 잔혹사편</a>
+                                <a class="dropdown-item" href="#">나를 사랑한 스파이</a>
+                                <a class="dropdown-item" href="#">안녕? 나야!</a>
+                                <a class="dropdown-item" href="#">알고있지만</a>
+                                <a class="dropdown-item" href="#">유미의 세포들 시즌 1</a>
+                                <a class="dropdown-item" href="#">먹고 사랑하라, 죽이게</a>
+                                <a class="dropdown-item" href="#">야식남녀</a>
+                                <a class="dropdown-item" href="#">진심이 닿다</a>
+                            </div>
+                        </div>
+
+                        <!-- d -->
+                        <div class="dropdown no-arrow col-lg-3 mb-4">
+                            <button class="btn btn-secondary dropdown-toggle col-xl-12" type="button"
+                                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false" style="background-color: #b9ddf1;
+                                background-image: linear-gradient(180deg, #b9ddf1 10%, #b9ddf1 100%);
+                                background-size: cover;">
+                                해당 드라마 펼쳐보기(D)
+                            </button>
+                            <div class="dropdown-menu col-xl-12" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">18 어게인</a>      
+                                <a class="dropdown-item" href="#">간 떨어지는 동거</a>
+                                <a class="dropdown-item" href="#">갯마을 차차차</a>
+                                <a class="dropdown-item" href="#">구미호뎐</a>
+                                <a class="dropdown-item" href="#">그 해 우리는</a>
+                                <a class="dropdown-item" href="#">꽃 피면 달 생각하고</a>
+                                <a class="dropdown-item" href="#">날씨가 좋으면 찾아가겠어요</a>
+                                <a class="dropdown-item" href="#">낭만닥터 김사부 2</a>
+                                <a class="dropdown-item" href="#">너의 밤이 되어줄게</a>
+                                <a class="dropdown-item" href="#">더킹 : 영원의 군주</a>
+                                <a class="dropdown-item" href="#">연모</a>      
+                                <a class="dropdown-item" href="#">오월의 청춘</a>
+                                <a class="dropdown-item" href="#">초콜릿</a>
+                                <a class="dropdown-item" href="#">런 온</a>
+                                <a class="dropdown-item" href="#">로맨스는 별책부록</a>
+                                <a class="dropdown-item" href="#">머니게임</a>
+                                <a class="dropdown-item" href="#">멜로가 체질</a>
+                                <a class="dropdown-item" href="#">바람이 분다</a>
+                                <a class="dropdown-item" href="#">반의 반</a>
+                                <a class="dropdown-item" href="#">본 어게인</a>
+                                <a class="dropdown-item" href="#">브람스를 좋아하세요?</a>      
+                                <a class="dropdown-item" href="#">사랑의 불시착</a>
+                                <a class="dropdown-item" href="#">사이코지만 괜찮아</a>
+                                <a class="dropdown-item" href="#">설강화</a>
+                                <a class="dropdown-item" href="#">스타트업</a>
+                                <a class="dropdown-item" href="#">어쩌다 발견한 하루</a>
+                                <a class="dropdown-item" href="#">오 마이 베이비</a>
+                                <a class="dropdown-item" href="#">우리, 사랑했을까</a>
+                                <a class="dropdown-item" href="#">월간 집</a>
+                                <a class="dropdown-item" href="#">이태원 클라쓰</a>
+                                <a class="dropdown-item" href="#">지금, 헤어지는 중입니다</a>      
+                                <a class="dropdown-item" href="#">철인왕후</a>
+                                <a class="dropdown-item" href="#">청춘기록</a>
+                                <a class="dropdown-item" href="#">크레이지 러브</a>
+                                <a class="dropdown-item" href="#">하자있는 인간들</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white shadow">
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+
+        
+    </div>
+    <!-- End of Page Wrapper -->
+
+
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+    <script src="js/demo/chart-bar-demo.js"></script>
+
+</body>
+
+</html>

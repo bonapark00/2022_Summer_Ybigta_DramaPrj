@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "Bamin";
+    src: url("../fonts/BMDOHYEON_ttf.ttf");
+  }
+  
+  .customFont{
+    font-family: "Bamin";
+    font-size: 25px;
+    line-height: 100px;
+    color: #4e73df
+  }

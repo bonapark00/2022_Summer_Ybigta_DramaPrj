@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Spoiler</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+    <style>
+        .hover-1 {
+            background-image: linear-gradient(#36b9cc,#36b9cc);
+            background-size: 0 100%;
+            background-repeat: no-repeat;
+            transition: .4s;
+        }
+        .hover-1:hover {
+            background-size: 100% 100%;
+        }
+
+        .hover-2 {
+            background: 
+                linear-gradient(#36b9cc 0 0) no-repeat
+                calc(200% - var(--i, 0) * 100%) 100% / 200% calc(100% * var(--i, 0) + .08em);
+            transition: .3s calc(var(--i, 0) * .3s), background-position .3s calc(.3s - calc(var(--i, 0) * .3s));
+        }
+        .hover-2:hover {
+            --i: 1;
+        }
+    </style>
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+                <div class="sidebar-brand-text mx-3">Spoiler</div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item">
+                <a class="nav-link" href="/">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Home</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Contents
+            </div>
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item active">
+                <a class="nav-link" href="/pattern">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Emotion Pattern</span></a>
+            </li>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="/flow">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Emotion Flow</span></a>
+            </li>
+        </ul>
+        <!-- End of Sidebar -->
+
+        
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    <!-- Topbar Navbar -->
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <h1 class="h3 mb-2 text-gray-800">4가지 감정(기쁨, 슬픔, 불안, 분노) 패턴 Cluster</h1>
+                    <p class="mb-4">
+                        4가지의 감정 별로 실루엣 스코어를 기준으로 K-means Clustering을 진행한 결과
+                    </p>
+
+                    <!-- Select Clusters -->
+                    <div class="row">
+                        <div class="col-lg-3 mb-4">
+                            <div class="card bg-primary shadow hover-2">
+                                <div class="card-body text-center text-lg">
+                                    <a href="/pattern/joy" class="text-white">기쁨</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 mb-4">
+                            <div class="card bg-primary shadow hover-2">
+                                <div class="card-body text-center text-lg">
+                                    <a href="/pattern/sad" class="text-white">슬픔</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 mb-4">
+                            <div class="card bg-primary shadow hover-2">
+                                <div class="card-body text-center text-lg">
+                                    <a href="/pattern/anxiety" class="text-white">불안</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 mb-4">
+                            <div class="card bg-primary shadow hover-2">
+                                <div class="card-body text-center text-lg">
+                                    <a href="/pattern/anger" class="text-white">분노</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white shadow">
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+
+        
+    </div>
+    <!-- End of Page Wrapper -->
+
+
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+    <script src="js/demo/chart-bar-demo.js"></script>
+
+</body>
+
+</html>
